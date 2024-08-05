@@ -403,7 +403,9 @@
 
 
 <script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
 
@@ -465,8 +467,7 @@
                                 
                                     这是我第一次创建博客，过程还是……嗯，感觉好麻烦啊！
 那就来个经典的
-hello world吧
-
+hello world
                                 
                             </div>
                             <div class="cover-btns">
@@ -666,8 +667,7 @@ hello world吧
                             
                                 这是我第一次创建博客，过程还是……嗯，感觉好麻烦啊！
 那就来个经典的
-hello world吧
-
+hello world
                             
                         </div>
                         <div class="publish-info">
@@ -776,7 +776,7 @@ hello world吧
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">614</span>&nbsp;字
+                class="white-color">613</span>&nbsp;字
             
             
             
