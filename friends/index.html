@@ -534,6 +534,65 @@
         </div>
 
         
+            <div class="card">
+                <div class="card-content">
+                    <style>  
+  .links {  
+    display: flex; /* 使.links成为一个flex容器，以支持横向布局 */  
+    flex-wrap: wrap; /* 如果需要，允许内容换行 */  
+    align-items: center; /* 在交叉轴上居中对齐子项（对于单行布局可能不是必需的）*/  
+    justify-content: space-around; /* 在主轴上均匀分配子项之间的空间 */  
+  }  
+  .link-item {  
+    position: relative;  
+    display: inline-block; /* 或者使用flex，但在这里inline-block就足够了 */  
+    margin: 30px 20px; /* 在友联之间添加一些水平间距 */  
+    /* 如果需要，可以添加vertical-align: middle;来垂直居中对齐，但在这里可能不是必需的 */  
+  }  
+    
+  .link-img {  
+    width: 150px;  
+    height: 150px;  
+    border-radius: 50%;  
+    object-fit: cover;  
+    display: block;  
+  }  
+    
+  .link-name {  
+    position: absolute;  
+    bottom: 100%;  
+    left: 50%;  
+    transform: translateX(-50%);  
+    visibility: hidden;  
+    opacity: 0;  
+    transition: visibility 0s, opacity 0.5s ease;  
+    background-color: rgba(0, 0, 0, 0.7);  
+    color: #fff;  
+    padding: 5px 10px;  
+    border-radius: 5px;  
+    white-space: nowrap;  
+  }  
+    
+  .link-item:hover .link-name {  
+    visibility: visible;  
+    opacity: 1;  
+  }  
+</style>  
+
+<div class="links">  
+  <div class="link-item">  
+    <a href="https://zhouzhou1o.github.io/" target="_blank">  
+      <img src="https://jsd.onmicrosoft.cn/gh/zhouzhou1o/tuchuang@main/img/202408061548899.jpg" alt="示例网站" class="link-img">  
+      <span class="link-name">自己</span>  
+    </a>  
+  </div>  
+  <!-- 重复上述div以添加更多友情链接，它们将横向展示 -->  
+  
+</div>
+
+                </div>
+            </div>
+        
 
         <div class="card">
 
