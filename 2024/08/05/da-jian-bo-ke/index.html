@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="搭建博客, 周周Wiki">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 7.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -45,7 +45,7 @@
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -467,7 +467,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    583
+                    689
                 </div>
                 
 
@@ -483,6 +483,11 @@
         <link rel="stylesheet" href="/libs/prism/prism.css">
         
 
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
         
 
         <div class="card-content article-card-content">
@@ -509,6 +514,25 @@
 <p>主题一般都是直接把别人的拿来就行了，自己找找喜欢的</p>
 <p>我用的是	<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">传送门</a>	的主题，因为我懒，所以直接找的教程里面推荐的主题</p>
 <p>一般去网上，b站上都能搜到，<strong>注意本篇用的hexo</strong>，好像不同的还不太一样</p>
+<h2 id="解决代码高亮问题"><a href="#解决代码高亮问题" class="headerlink" title="解决代码高亮问题"></a>解决代码高亮问题</h2><p><strong>硬控我一整天！</strong>💢💢💢💢💢💢💢💢💢</p>
+<p>根目录的config，hexo 7.0.0以上 好像把代码高亮的东西改了</p>
+<pre class="language-none"><code class="language-none">syntax_highlighter: prismjs # or highlight.js
+highlight:
+  enable: false
+  line_number: true
+  auto_detect: false
+  tab_replace: &#39;&#39;
+  wrap: true
+  hljs: false
+prismjs:
+  enable: true
+  preprocess: true
+  line_number: false
+  tab_replace: &#39;&#39;</code></pre>
+
+
+
+<p>另外要确保你的主题是最新的，我的就是几年前的那个版本，然后手动改了好多文件才搞好的。qwq</p>
 <h3 id="另一种方式建博客"><a href="#另一种方式建博客" class="headerlink" title="另一种方式建博客"></a>另一种方式建博客</h3><p>我发现<strong>hexo</strong>好像可以被<strong>wordpress</strong>代替，这个好像比hexo操作起来简单好多，毕竟谁也不想在几千行代码里面去改原来的主题吧。</p>
 <p>有一说一，原来那个主题有点像小黄网站，而且！往下一拉，全是亮绿色😒，真服了，不如我的小粉（欸嘿）</p>
 <h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><p>本篇改编自<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_58608526/article/details/124652412?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169451162116800186514102%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169451162116800186514102&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-124652412-null-null.142">传送门</a>这个人写的，写的还挺详细的，就看1，2部分就行了，3没啥用</p>
@@ -859,8 +883,6 @@
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
 
 <!-- 代码块复制 -->
 
@@ -1042,7 +1064,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">24k</span>&nbsp;字
+                class="white-color">24.1k</span>&nbsp;字
             
             
             
@@ -1285,7 +1307,7 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
 </body>
