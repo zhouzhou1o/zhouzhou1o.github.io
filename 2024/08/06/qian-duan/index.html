@@ -492,7 +492,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-HTML"><a href="#1-HTML" class="headerlink" title="1.HTML"></a>1.HTML</h2><p>21.p61</p>
+                <h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>21.p61</p>
 <h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><pre class="language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
@@ -611,7 +611,7 @@
 <h3 id="③布局"><a href="#③布局" class="headerlink" title="③布局"></a>③布局</h3><h4 id="盒子模型："><a href="#盒子模型：" class="headerlink" title="盒子模型："></a>盒子模型：</h4><p>test11</p>
 <p>内容（content），内边距（padding），边框（border）外边距（margin）</p>
 <p><img src="https://jsd.onmicrosoft.cn/gh/zhouzhou1o/tuchuang@main/img/202408061934923.png"></p>
-<h5 id="布局标签"><a href="#布局标签" class="headerlink" title="布局标签"></a>布局标签</h5><h6 id="div"><a href="#div" class="headerlink" title="div"></a>div</h6><p>特点</p>
+<h5 id="div"><a href="#div" class="headerlink" title="div"></a>div</h5><p>特点</p>
 <ol>
 <li>一行只显示一个（独占一行）</li>
 <li>可以设置宽高（width，height）</li>
@@ -628,9 +628,7 @@
 <li>&lt;th：表示表头单元格，具有加粗居中效果</li>
 <li>&lt; td:表示普通单元格</li>
 </ol>
-<h5 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h5><form
-
-
+<h5 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h5><p><code>&lt;form&gt;</code></p>
 <h6 id="表单项："><a href="#表单项：" class="headerlink" title="表单项："></a>表单项：</h6><p><strong>必须有name才能提交</strong></p>
 <p>不同类型的input元素、下拉列表、文本域</p>
 <ol>
@@ -645,7 +643,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 //点用户名也可以直接跳掉输入框</code></pre></li>
 </ol>
-<h6 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h6><ol>
+<h5 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h5><ol>
 <li>action：规定当提交表单时向何处发送表单数据，指定url地址</li>
 <li>method：规定用于发送表单数据的方式。GET、POST<ol>
 <li>get：表单数据拼接到url后面，有大小限制</li>
@@ -660,15 +658,15 @@
 <li>一般把脚本放在《body》元素的底部</li>
 </ol>
 <h4 id="外部脚本"><a href="#外部脚本" class="headerlink" title="外部脚本"></a>外部脚本</h4><p>将JS代码定义在外部JS文件中，然后引入到HTML中</p>
-<p>外部JS文件，只包含JS代码，不包含《script》标签</p>
+<p>外部文件，只包含代码，不包含《script》标签</p>
 <h3 id="JS基础语法"><a href="#JS基础语法" class="headerlink" title="JS基础语法"></a>JS基础语法</h3><h4 id="①输出语句"><a href="#①输出语句" class="headerlink" title="①输出语句"></a>①输出语句</h4><ol>
-<li>使用window.alert()写入警告框，window可省略</li>
-<li>使用document.write()写入HTML页面输出</li>
-<li>使用console.log()写入浏览器控制台</li>
+<li>使用<code>window.alert()</code>写入警告框，window可省略</li>
+<li>使用<code>document.write()</code>写入HTML页面输出</li>
+<li>使用<code>console.log()</code>写入浏览器控制台</li>
 </ol>
-<pre class="language-markup" data-language="markup"><code class="language-markup">window.alert("hello");//在警告窗中弹出
-document.write("hello");//在页面展示出来
-console.log("hello");//在控制台输出（没啥用）</code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">window<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//在警告窗中弹出</span>
+document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//在页面展示出来</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//在控制台输出（没啥用）</span></code></pre>
 
 <h4 id="②变量"><a href="#②变量" class="headerlink" title="②变量"></a>②变量</h4><h5 id="var"><a href="#var" class="headerlink" title="var"></a>var</h5><p>用var来声明变量，变量可以存放不同类型的值</p>
 <p>var的作用域很大，全是全局变量，可重复定义同一个变量</p>
@@ -1279,7 +1277,7 @@ a<span class="token operator">===</span>”<span class="token number">10</span>�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">24.1k</span>&nbsp;字
+                class="white-color">24.2k</span>&nbsp;字
             
             
             
