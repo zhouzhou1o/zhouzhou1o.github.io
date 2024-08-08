@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="筛质数, 周周Wiki">
+    <meta name="keywords" content="欧拉函数, 周周Wiki">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>筛质数 | 周周Wiki</title>
+    <title>欧拉函数 | 周周Wiki</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -307,12 +307,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">筛质数</h1>
+                    <h1 class="description center-align post-title">欧拉函数</h1>
                 </div>
             </div>
         </div>
@@ -453,7 +453,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-08-07
+                    2024-08-08
                 </div>
                 
 
@@ -467,7 +467,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    231
+                    89
                 </div>
                 
 
@@ -492,41 +492,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="筛质数"><a href="#筛质数" class="headerlink" title="筛质数"></a>筛质数</h2><h3 id="埃氏筛法"><a href="#埃氏筛法" class="headerlink" title="埃氏筛法"></a>埃氏筛法</h3><p>复杂度O(n) </p>
-<p><strong>一般用于预处理前n项的质数个数（多组数据）</strong> </p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c">
-<span class="token keyword">const</span> <span class="token keyword">int</span> N<span class="token operator">=</span><span class="token number">1e7</span><span class="token operator">+</span><span class="token number">10</span><span class="token punctuation">;</span>
-
-<span class="token keyword">int</span> a<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
-bool b<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>			<span class="token comment">//判断有没有被筛过 </span>
-
-<span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">1e7</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>			<span class="token comment">//如果没删过 </span>
-            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>j<span class="token operator">*</span>i<span class="token operator">&lt;=</span><span class="token number">1e7</span><span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
-                b<span class="token punctuation">[</span>i<span class="token operator">*</span>j<span class="token punctuation">]</span><span class="token operator">=</span>true<span class="token punctuation">;</span>			<span class="token comment">//把他的倍数删掉 </span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">1e7</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-        a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token operator">!</span>b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//求前缀和 </span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="线性筛法"><a href="#线性筛法" class="headerlink" title="线性筛法"></a>线性筛法</h3><p><strong>直接记录质数的个数并把每个质数加到数组里面</strong> </p>
-<p>感觉这个好用</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">const</span> <span class="token keyword">int</span> N<span class="token operator">=</span><span class="token number">1e7</span><span class="token operator">+</span><span class="token number">10</span><span class="token punctuation">;</span>
-
-<span class="token keyword">int</span> a<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span>cnt<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>			<span class="token comment">//有几个质数 </span>
-bool b<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>				<span class="token comment">//判断有没有被筛过 </span>
-
-<span class="token keyword">void</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+                <h1 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h1><p><strong>求1-n中所有与n互质的数，的个数被称为欧拉函数</strong></p>
+<p>ϕ(N) &#x3D; N×（1-1&#x2F;p1）×（1-1&#x2F;p2）×…×（1−1&#x2F;pm）</p>
+<p>p是n的所有质因数</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> res <span class="token operator">=</span> x<span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> x <span class="token operator">/</span> i<span class="token punctuation">;</span> i <span class="token operator">++</span> <span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
     <span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>a<span class="token punctuation">[</span>cnt<span class="token operator">++</span><span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span>		<span class="token comment">//没筛过，是质数，加到数组里面 </span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">*</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token punctuation">&#123;</span>
-            b<span class="token punctuation">[</span>i<span class="token operator">*</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">=</span>true<span class="token punctuation">;</span>			<span class="token comment">//把质数的倍数筛掉 </span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">%</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
+        res <span class="token operator">=</span> res <span class="token operator">/</span> i <span class="token operator">*</span> <span class="token punctuation">(</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//N*（1-1/p1）</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>x <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> x <span class="token operator">/=</span> i<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> res <span class="token operator">=</span> res <span class="token operator">/</span> x <span class="token operator">*</span> <span class="token punctuation">(</span>x <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -554,7 +530,7 @@ bool b<span class="token punctuation">[</span>N<span class="token punctuation">]
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zhouzhou1o.github.io/2024/08/07/suan-fa/shai-zhi-shu/">https://zhouzhou1o.github.io/2024/08/07/suan-fa/shai-zhi-shu/</a>
+                    <a href="https://zhouzhou1o.github.io/2024/08/08/suan-fa/ou-la-han-shu/">https://zhouzhou1o.github.io/2024/08/08/suan-fa/ou-la-han-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -763,28 +739,29 @@ bool b<span class="token punctuation">[</span>N<span class="token punctuation">]
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/08/08/suan-fa/zhan-zhuan-xiang-chu-fa/">
+                <a href="/2024/08/08/suan-fa/ou-la-han-shu/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="辗转相除法">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="欧拉函数">
                         
-                        <span class="card-title">辗转相除法</span>
+                        <span class="card-title">欧拉函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            欧几里得算法
+                            1-n中所有与n互质的数，的个数被称为欧拉函数
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-08-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -797,6 +774,7 @@ bool b<span class="token punctuation">[</span>N<span class="token punctuation">]
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -815,23 +793,23 @@ bool b<span class="token punctuation">[</span>N<span class="token punctuation">]
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/08/07/suan-fa/kuai-su-mi/">
+                <a href="/2024/08/08/suan-fa/zhan-zhuan-xiang-chu-fa/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="快速幂">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="辗转相除法">
                         
-                        <span class="card-title">快速幂</span>
+                        <span class="card-title">辗转相除法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            快速幂
+                            欧几里得算法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-08
                             </span>
                         <span class="publish-author">
                             
