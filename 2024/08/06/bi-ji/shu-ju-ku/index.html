@@ -497,37 +497,37 @@
 <p><strong>cahr</strong>(长度);字符串(不管输入几个字符，直接占满);	   </p>
 <p><strong>varchar</strong>(长度)	字符串(存几个占几个);						</p>
 <h4 id="操作数据库"><a href="#操作数据库" class="headerlink" title="操作数据库"></a>操作数据库</h4><p>数据库databases</p>
-<h5 id="1-查询所有数据库"><a href="#1-查询所有数据库" class="headerlink" title="1.查询所有数据库"></a>1.查询所有数据库</h5><pre class="language-mysql" data-language="mysql"><code class="language-mysql">show databases;</code></pre>
+<h5 id="1-查询所有数据库"><a href="#1-查询所有数据库" class="headerlink" title="1.查询所有数据库"></a>1.查询所有数据库</h5><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">show databases;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h5 id="2-创建数据库"><a href="#2-创建数据库" class="headerlink" title="2.创建数据库"></a>2.创建数据库</h5><pre class="language-mysql" data-language="mysql"><code class="language-mysql">create database 数据库名称;
+<h5 id="2-创建数据库"><a href="#2-创建数据库" class="headerlink" title="2.创建数据库"></a>2.创建数据库</h5><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create database 数据库名称;
 &#x2F;&#x2F;如果不存在才创建，存在则不进行
-create database if not exists 数据库名称;</code></pre>
+create database if not exists 数据库名称;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="3-删除数据库"><a href="#3-删除数据库" class="headerlink" title="3.删除数据库"></a>3.删除数据库</h5><pre class="language-mysql" data-language="mysql"><code class="language-mysql">drop database 数据库名称;
+<h5 id="3-删除数据库"><a href="#3-删除数据库" class="headerlink" title="3.删除数据库"></a>3.删除数据库</h5><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">drop database 数据库名称;
 &#x2F;&#x2F;如果存在就删除
-drop database if exists 数据库名称;</code></pre>
+drop database if exists 数据库名称;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="4-使用数据库"><a href="#4-使用数据库" class="headerlink" title="4.使用数据库"></a>4.使用数据库</h5><pre class="language-mysql" data-language="mysql"><code class="language-mysql">&#x2F;&#x2F;查看当前使用数据库
+<h5 id="4-使用数据库"><a href="#4-使用数据库" class="headerlink" title="4.使用数据库"></a>4.使用数据库</h5><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">&#x2F;&#x2F;查看当前使用数据库
 select database();
 &#x2F;&#x2F;使用数据库
-use 数据库名称;</code></pre>
+use 数据库名称;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h6 id="操作表"><a href="#操作表" class="headerlink" title="操作表"></a>操作表</h6><p>表table</p>
 <h6 id="1-创建"><a href="#1-创建" class="headerlink" title="1.创建"></a>1.创建</h6><p>create table 表名(<br>    字段名1 数据类型(int,string),<br>    字段名2 数据类型,<br>    字段名3 数据类型,<br>    字段名4 数据类型<br>)</p>
 <p>最后一个没有逗号</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">&#x2F;&#x2F;先写变量名，再写类型
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">&#x2F;&#x2F;先写变量名，再写类型
 create table tb_user(
     id int,
     username varchar(20),
     password varchar(32)
-);</code></pre>
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h6 id="2-查询"><a href="#2-查询" class="headerlink" title="2.查询"></a>2.查询</h6><pre class="language-mysql" data-language="mysql"><code class="language-mysql">&#x2F;&#x2F;查询当前数据库下所有名称
+<h6 id="2-查询"><a href="#2-查询" class="headerlink" title="2.查询"></a>2.查询</h6><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">&#x2F;&#x2F;查询当前数据库下所有名称
 show tables;
 &#x2F;&#x2F;查询表结构
-desc 表名称;</code></pre>
+desc 表名称;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h6 id="3-修改"><a href="#3-修改" class="headerlink" title="3.修改"></a>3.修改</h6><pre class="language-mysql" data-language="mysql"><code class="language-mysql">&#x2F;&#x2F;1.修改表名
+<h6 id="3-修改"><a href="#3-修改" class="headerlink" title="3.修改"></a>3.修改</h6><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">&#x2F;&#x2F;1.修改表名
 alter table 表名 rename to 新的表名;
 &#x2F;&#x2F;2.添加一列
 alter table 表名 add 列名 数据类型;
@@ -536,42 +536,42 @@ alter table 表名 modify 列名 新数据类型;
 &#x2F;&#x2F;4.修改列名和数据类型
 alter table 表名 change 列名 新列名 新数据类型;
 &#x2F;&#x2F;5.删除列
-alter table 表名 drop 列名;</code></pre>
+alter table 表名 drop 列名;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h6 id="4-删除"><a href="#4-删除" class="headerlink" title="4.删除"></a>4.删除</h6><pre class="language-mysql" data-language="mysql"><code class="language-mysql">drop table 表名;
+<h6 id="4-删除"><a href="#4-删除" class="headerlink" title="4.删除"></a>4.删除</h6><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">drop table 表名;
 &#x2F;&#x2F;删除表时判断表是否存在
-drop table if exists 表名;</code></pre>
+drop table if exists 表名;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h3><h4 id="添加数据"><a href="#添加数据" class="headerlink" title="添加数据"></a>添加数据</h4><p>给指定列添加元素（可以是多个列）</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">insert into 表名(列名1，列名2…) values(值1，值2…);
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">insert into 表名(列名1，列名2…) values(值1，值2…);
 &#x2F;&#x2F;给全部列添加元素，可省略列名
-&#x2F;&#x2F;批量添加（），（），（）即可</code></pre>
+&#x2F;&#x2F;批量添加（），（），（）即可<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h4><pre class="language-mysql" data-language="mysql"><code class="language-mysql">select * from 表名;
-select (列名) from 表名;</code></pre>
+<h4 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h4><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select * from 表名;
+select (列名) from 表名;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h4 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h4><pre class="language-mysql" data-language="mysql"><code class="language-mysql">update 表名 set 列名1&#x3D;值1，列名2&#x3D;值2 where 条件；
+<h4 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h4><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">update 表名 set 列名1&#x3D;值1，列名2&#x3D;值2 where 条件；
 &#x2F;&#x2F;例如
 update user set sex&#x3D;&#39;女&#39; where name&#x3D;&#39;张三&#39;;
-&#x2F;&#x2F;把所有名字是张三的性别改成女</code></pre>
+&#x2F;&#x2F;把所有名字是张三的性别改成女<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>注意：如果不加where条件，表中所有数据都会被修改</strong>！！</p>
-<h4 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h4><pre class="language-mysql" data-language="mysql"><code class="language-mysql">delete from 表名 where条件;</code></pre>
+<h4 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h4><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">delete from 表名 where条件;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>注意：如果不加where条件，表中所有数据都会被删除</strong>！！</p>
 <h3 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h3><p>Nacicat  stutest</p>
 <h4 id="1-基础查询"><a href="#1-基础查询" class="headerlink" title="1.基础查询"></a>1.基础查询</h4><p>1.查询字段</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">select 字段列名  from 表名;
-select * from 表名;&#x2F;&#x2F;不要使用！！</code></pre>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select 字段列名  from 表名;
+select * from 表名;&#x2F;&#x2F;不要使用！！<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>2.查询时去除重复元素</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">select distinct 字段列名 from 表名;</code></pre>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select distinct 字段列名 from 表名;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>3.起别名</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">select 字段列名 as 别名 from 表名;
-as可省略</code></pre>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select 字段列名 as 别名 from 表名;
+as可省略<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h4 id="2-条件查询"><a href="#2-条件查询" class="headerlink" title="2.条件查询"></a>2.条件查询</h4><h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><pre class="language-mysql" data-language="mysql"><code class="language-mysql">select 列名 from 表名 where 条件;</code></pre>
+<h4 id="2-条件查询"><a href="#2-条件查询" class="headerlink" title="2.条件查询"></a>2.条件查询</h4><h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select 列名 from 表名 where 条件;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h5 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h5><ol>
 <li>等于：&#x3D;</li>
@@ -583,15 +583,15 @@ as可省略</code></pre>
 <li>不是空：is not null</li>
 </ol>
 <h5 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h5><p>like:%表示多个字符  _表示单个字符，第一个列名可以用*表示全部</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">select 列名 from 表名 where 列名 like &#39;条件&#39;;
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select 列名 from 表名 where 列名 like &#39;条件&#39;;
 例如：
-select * from stu where name like &#39;马%&#39;;&#x2F;&#x2F;姓马的人</code></pre>
+select * from stu where name like &#39;马%&#39;;&#x2F;&#x2F;姓马的人<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="3-排序查询"><a href="#3-排序查询" class="headerlink" title="3.排序查询"></a>3.排序查询</h4><p>升序asc，降序desc</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">select 列名 from 表名 order by 列名1 排序方式1,列名2 排序方式2……;
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select 列名 from 表名 order by 列名1 排序方式1,列名2 排序方式2……;
 例如：
 select 列名 from stu order by math desc,english asc;
-先按数学降序排，再按英语升序排</code></pre>
+先按数学降序排，再按英语升序排<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>前面排序内容相同时，才用后面的排序</p>
 <h4 id="4-分组查询"><a href="#4-分组查询" class="headerlink" title="4.分组查询"></a>4.分组查询</h4><h5 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h5><p>将一列作为一个整体，纵向计算，<strong>聚合函数均不计算null</strong></p>
@@ -602,32 +602,32 @@ select 列名 from stu order by math desc,english asc;
 <li>ave(列名):求平均值（求这一列的平均值）</li>
 </ol>
 <h6 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h6><p>列名可以用* 表示全部</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">select 聚合函数名(列名) from 表名;</code></pre>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select 聚合函数名(列名) from 表名;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h5 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h5><h6 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h6><pre class="language-mysql" data-language="mysql"><code class="language-mysql">select 分组列名，聚合函数 from 表名 where 分组前的条件 group by 分组列名 having 分组后的条件</code></pre>
+<h5 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h5><h6 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h6><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select 分组列名，聚合函数 from 表名 where 分组前的条件 group by 分组列名 having 分组后的条件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>例如</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">-- 1.查询男同学和女同学各自的数学平均分
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">-- 1.查询男同学和女同学各自的数学平均分
 select sex,avg(math) from stu group by sex;
 -- 2.查询男同学和女同学各自的数学平均分，以及各自的人数
 select sex,avg(math),count(*) from stu group by sex;
 -- 3.查询男同学和女同学各自的数学平均分，以及人数，分数低于70不参与评分
 select sex,avg(math),count(*) from stu where math&gt;70 group by sex;
 -- 4.在3的基础上，人数要大于2
-select sex,avg(math),count(*) from stu where math&gt;70 group by sex having count(*)&gt;2;</code></pre>
+select sex,avg(math),count(*) from stu where math&gt;70 group by sex having count(*)&gt;2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>where和having的区别：</p>
 <ol>
 <li>执行时机不同，where是分组之前限定，不满足where不参与分组，having是分组之后的过滤</li>
 <li>可判断条件不同，where不能对聚合函数进行判断，having可以</li>
 </ol>
-<h4 id="5-分页查询"><a href="#5-分页查询" class="headerlink" title="5.分页查询"></a>5.分页查询</h4><h5 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h5><pre class="language-mysql" data-language="mysql"><code class="language-mysql">select 列名 from 表名 limit 起始索引,查询条数;</code></pre>
+<h4 id="5-分页查询"><a href="#5-分页查询" class="headerlink" title="5.分页查询"></a>5.分页查询</h4><h5 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h5><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select 列名 from 表名 limit 起始索引,查询条数;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>起始索引：开始的位置</p>
 <p>计算公式：起始索引&#x3D;（当前页码-1）*每页条数</p>
 <p>例如</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">-- 每页显示三条数据，查询第2页数据
-select * from stu limit 3,3;</code></pre>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">-- 每页显示三条数据，查询第2页数据
+select * from stu limit 3,3;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h3><p>概念：限制加入表中的数据</p>
 <h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><ol>
@@ -639,30 +639,30 @@ select * from stu limit 3,3;</code></pre>
 </ol>
 <p>注意：默认约束只有不给值时才默认，如果给null结果是null而不是默认</p>
 <p>例如</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">create table emp(
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table emp(
 id int PRIMARY KEY,	-- 员工id，主键，且逐渐增加
 ename varchar(50) NOT NULL UNIQUE,	-- 员工姓名，非空且唯一
 joindate date NOT NULL,	-- 入职日期，非空
 salary double(7,2) NOT NULL,	-- 工资，非空
 bonus double(7,2) DEFAULT 0	-- 奖金，如果没有默认为0
-);</code></pre>
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h5><p>Nacicat  test21</p>
 <h6 id="添加外键"><a href="#添加外键" class="headerlink" title="添加外键"></a>添加外键</h6><p>1.创建两个表之前，在子表添加外键</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">-- 在子表内部写
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">-- 在子表内部写
 CONSTRAINT 外键名称 FOREIGN KEY(子表列名) REFERENCES 主表(主表列名);
 例如
-CONSTRAINT fk_emp_dept FOREIGN KEY(dep_id) REFERENCES dept(id);</code></pre>
+CONSTRAINT fk_emp_dept FOREIGN KEY(dep_id) REFERENCES dept(id);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>2.创建表之后添加外键</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">alter table 子表名 add CONSTRAINT 外键名称 FOREIGN key(子表列名) REFERENCES 主表(主表列名);
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 子表名 add CONSTRAINT 外键名称 FOREIGN key(子表列名) REFERENCES 主表(主表列名);
 例如
-alter table emp add CONSTRAINT fk_emp_dept FOREIGN key(dep_id) REFERENCES dept(id);</code></pre>
+alter table emp add CONSTRAINT fk_emp_dept FOREIGN key(dep_id) REFERENCES dept(id);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>3.删除外键</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">alter table 子表名 drop FOREIGN key 外键名称;
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 子表名 drop FOREIGN key 外键名称;
 例如
-alter table emp drop FOREIGN key fk_emp_dept;</code></pre>
+alter table emp drop FOREIGN key fk_emp_dept;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h3><h4 id="表关系"><a href="#表关系" class="headerlink" title="表关系"></a>表关系</h4><p>一对一：用户和用户详情，用于表的拆分</p>
 <p>一对多：部门和员工</p>
@@ -681,17 +681,17 @@ alter table emp drop FOREIGN key fk_emp_dept;</code></pre>
 <li>子查询</li>
 </ol>
 <h4 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h4><p><img src="https://jsd.onmicrosoft.cn/gh/zhouzhou1o/tuchuang@main/img/202408061929697.png"></p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">-- 隐式内连接
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">-- 隐式内连接
 select 列名 from 表1，表2… where 条件;
 例如
 select * from emp,dept where emp.dep_id&#x3D;dept.did;
 -- 显示内连接
 select 列名 from 表1 join 表2 on 条件; 
 例如
-select * from emp join dept on emp.dep_id&#x3D;dept.did;</code></pre>
+select * from emp join dept on emp.dep_id&#x3D;dept.did;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h4><p><img src="https://jsd.onmicrosoft.cn/gh/zhouzhou1o/tuchuang@main/img/202408061930886.png"></p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">-- 左外连接
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">-- 左外连接
 -- 查询emp表所有数据和对应的员工信息
 select 列名 from 表1 left join 表2 on 条件;
 例如
@@ -701,10 +701,10 @@ select * from emp left join dept on emp.dep_id&#x3D;dept.did;
 -- 查询dept表所有数据和对应的员工信息
 select 列名 from 表1 right join 表2 on 条件;
 例如
-select * from emp right join dept on emp.dep_id&#x3D;dept.did;</code></pre>
+select * from emp right join dept on emp.dep_id&#x3D;dept.did;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h4><p>嵌套查询</p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">-- 查询财务部和市场部所有员工信息
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">-- 查询财务部和市场部所有员工信息
 -- 单行单列：一个条件
 select 列名 from 表名 where 条件 ()&#x3D;(子查询);
 -- 例如
@@ -726,14 +726,14 @@ select 列名 from (子查询) where 条件;
 select * from emp where join_date&gt;&#39;2011-11-11&#39;;
 select * from emp,dept where emp.dep_id&#x3D;dept.did;
 -- 合并
-select * from (select * from emp where join_date&gt;&#39;2011-11-11&#39;)t1,dept where t1.dep_id&#x3D;dept.did;</code></pre>
+select * from (select * from emp where join_date&gt;&#39;2011-11-11&#39;)t1,dept where t1.dep_id&#x3D;dept.did;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><pre class="language-mysql" data-language="mysql"><code class="language-mysql">-- 开启事务
+<h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">-- 开启事务
 begin;
 -- 提交事务
 commit;
 -- 回滚事务
-rollback;</code></pre>
+rollback;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h2><p><strong>21年10月的</strong></p>
 <h3 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h3><p>test30</p>
@@ -741,31 +741,31 @@ rollback;</code></pre>
 <li><p>导入驱动jar包</p>
 </li>
 <li><p>注册驱动</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//可以省略不写了</span>
-<span class="token class-name">Class</span><span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//可以省略不写了</span>
+<span class="token class-name">Class</span><span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 <li><p>获取连接</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> url <span class="token operator">=</span> <span class="token string">"jdbc:mysql://localhost:3306/db1"</span><span class="token punctuation">;</span><span class="token comment">//固定的</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> url <span class="token operator">=</span> <span class="token string">"jdbc:mysql://localhost:3306/db1"</span><span class="token punctuation">;</span><span class="token comment">//固定的</span>
 <span class="token class-name">String</span> user <span class="token operator">=</span> <span class="token string">"root"</span><span class="token punctuation">;</span>			<span class="token comment">//你的用户名</span>
 <span class="token class-name">String</span> password <span class="token operator">=</span> <span class="token string">"qpiu1230"</span><span class="token punctuation">;</span>	<span class="token comment">//你的密码</span>
-<span class="token class-name">Connection</span> conn <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>user<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取连接</span></code></pre>
+<span class="token class-name">Connection</span> conn <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>user<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取连接</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>定义SQL语句</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> sql <span class="token operator">=</span> <span class="token string">"update account set money=2000 where id=1;"</span><span class="token punctuation">;</span>	<span class="token comment">//“”就是在mysql中的操作语句</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> sql <span class="token operator">=</span> <span class="token string">"update account set money=2000 where id=1;"</span><span class="token punctuation">;</span>	<span class="token comment">//“”就是在mysql中的操作语句</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>获取SQL对象</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Statement</span> stmt <span class="token operator">=</span> conn<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//固定的</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Statement</span> stmt <span class="token operator">=</span> conn<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//固定的</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>执行SQL</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> cnt<span class="token operator">=</span>stmt<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//获取返回值受影响的行数</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> cnt<span class="token operator">=</span>stmt<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//获取返回值受影响的行数</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>处理返回结果</p>
 </li>
 <li><p>释放资源</p>
-<pre class="language-java" data-language="java"><code class="language-java">stmt<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-conn<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></li>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">stmt<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+conn<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 </ol>
-<h4 id="DriverManager"><a href="#DriverManager" class="headerlink" title="DriverManager"></a>DriverManager</h4><h5 id="获取连接"><a href="#获取连接" class="headerlink" title="获取连接"></a>获取连接</h5><pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Connection</span> conn <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>user<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取连接</span></code></pre>
+<h4 id="DriverManager"><a href="#DriverManager" class="headerlink" title="DriverManager"></a>DriverManager</h4><h5 id="获取连接"><a href="#获取连接" class="headerlink" title="获取连接"></a>获取连接</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Connection</span> conn <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>user<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取连接</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>参数</p>
 <ol>
@@ -781,14 +781,14 @@ conn<span class="token punctuation">.</span><span class="token function">close</
 <h4 id="Connection"><a href="#Connection" class="headerlink" title="Connection"></a>Connection</h4><p>作用：</p>
 <ol>
 <li><p>获取SQL对象</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Connection</span> conn <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>user<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Connection</span> conn <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span>user<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span> 
 <span class="token comment">//1.普通执行SQL</span>
 <span class="token class-name">Statement</span> stmt <span class="token operator">=</span> conn<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//2.预编译SQL的对象：防止SQL注入</span>
-<span class="token class-name">PreparedStatement</span> pstmt <span class="token operator">=</span> conn<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<span class="token class-name">PreparedStatement</span> pstmt <span class="token operator">=</span> conn<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>管理事务</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">try</span><span class="token punctuation">&#123;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">try</span><span class="token punctuation">&#123;</span>
 	<span class="token comment">//开启事务</span>
 	conn<span class="token punctuation">.</span><span class="token function">setAutoCommit</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token comment">//代码块</span>
@@ -799,42 +799,42 @@ conn<span class="token punctuation">.</span><span class="token function">close</
 	<span class="token comment">//回滚事务</span>
 	conn<span class="token punctuation">.</span><span class="token function">rollback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code></pre></li>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h4 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h4><p>作用：执行SQL语句</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> cnt<span class="token operator">=</span>stmt<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//返回执行成功的行数</span>
-<span class="token class-name">ResultSet</span> r<span class="token operator">=</span>stmt<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> cnt<span class="token operator">=</span>stmt<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//返回执行成功的行数</span>
+<span class="token class-name">ResultSet</span> r<span class="token operator">=</span>stmt<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h5 id="ResultSet"><a href="#ResultSet" class="headerlink" title="ResultSet"></a>ResultSet</h5><p>test34</p>
 <p>封装执行语句的查询结果</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">ResultSet</span> r<span class="token operator">=</span>stmt<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">ResultSet</span> r<span class="token operator">=</span>stmt<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//获取查询结果</span>
 <span class="token keyword">boolean</span> b<span class="token operator">=</span>r<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//将光标往下移动一行</span>
 <span class="token comment">//判断是否为有效行，true有效</span>
 xxx t<span class="token operator">=</span>r<span class="token punctuation">.</span><span class="token function">getxxx</span><span class="token punctuation">(</span>参数<span class="token punctuation">)</span>	<span class="token comment">//获取数据</span>
 xxx：数据类型，比如<span class="token keyword">int</span> t<span class="token operator">=</span><span class="token function">getint</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token class-name">String</span> s<span class="token operator">=</span>get <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//参数：1.列的编号，从1开始；2.列的名称</span></code></pre>
+<span class="token comment">//参数：1.列的编号，从1开始；2.列的名称</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>使用步骤</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
 	<span class="token comment">//获取数据</span>
 	r<span class="token punctuation">.</span><span class="token function">getxxx</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="PreparedStatement"><a href="#PreparedStatement" class="headerlink" title="PreparedStatement"></a>PreparedStatement</h4><p>test35</p>
 <ol>
 <li><p>获取PreparedStatement对象</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//用？占位</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//用？占位</span>
 <span class="token class-name">String</span> sql<span class="token operator">=</span><span class="token string">"select * from user where username= ? and password= ? "</span><span class="token punctuation">;</span>
 传入sql语句
-<span class="token class-name">PreparedStatement</span> pstmt <span class="token operator">=</span> conn<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<span class="token class-name">PreparedStatement</span> pstmt <span class="token operator">=</span> conn<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>设置参数？的值</p>
-<pre class="language-java" data-language="java"><code class="language-java">pstmt<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//给第一个？赋值</span>
-pstmt<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span>pwd<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//给第二个？赋值</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">pstmt<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//给第一个？赋值</span>
+pstmt<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span>pwd<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//给第二个？赋值</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 <li><p>执行sql</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">ResultSet</span> rs<span class="token operator">=</span>pstmt<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//并得到结果</span></code></pre></li>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">ResultSet</span> rs<span class="token operator">=</span>pstmt<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//并得到结果</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ol>
 <p>test53</p>
 <h2 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h2><p>步骤</p>
@@ -863,7 +863,7 @@ pstmt<span class="token punctuation">.</span><span class="token function">setStr
 </ol>
 </li>
 </ol>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//1.加载mybatis配置文件，获取SqlSessionFactory</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//1.加载mybatis配置文件，获取SqlSessionFactory</span>
 <span class="token class-name">String</span> resource <span class="token operator">=</span> <span class="token string">"mybatis-config.xml"</span><span class="token punctuation">;</span>
 <span class="token class-name">InputStream</span> inputStream <span class="token operator">=</span> <span class="token class-name">Resources</span><span class="token punctuation">.</span><span class="token function">getResourceAsStream</span><span class="token punctuation">(</span>resource<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name">SqlSessionFactory</span> sqlSessionFactory <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SqlSessionFactoryBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span>inputStream<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -876,7 +876,7 @@ pstmt<span class="token punctuation">.</span><span class="token function">setStr
 
 <span class="token comment">//3.1获取UserMapper的代理对象</span>
 <span class="token class-name">UserMapper</span> userMapper <span class="token operator">=</span> sqlSession<span class="token punctuation">.</span><span class="token function">getMapper</span><span class="token punctuation">(</span><span class="token class-name">UserMapper</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">></span></span> users <span class="token operator">=</span> userMapper<span class="token punctuation">.</span><span class="token function">selectAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">></span></span> users <span class="token operator">=</span> userMapper<span class="token punctuation">.</span><span class="token function">selectAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查"></a>增删改查</h4><p>test53</p>
 

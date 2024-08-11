@@ -542,27 +542,27 @@
 <li>复写方法</li>
 <li>注解设置url</li>
 </ol>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@WebServlet</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span>	<span class="token comment">//写地址</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@WebServlet</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span>	<span class="token comment">//写地址</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h5 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h5><p><strong>一个请求，多个资源</strong></p>
 <p><strong>请求消息：客户端发给服务器的数据</strong></p>
 <h6 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h6><p>test247</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token number">1</span>．获取请求方式：<span class="token constant">GET</span><span class="token punctuation">,</span> <span class="token class-name">String</span> <span class="token function">getMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token number">1</span>．获取请求方式：<span class="token constant">GET</span><span class="token punctuation">,</span> <span class="token class-name">String</span> <span class="token function">getMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token number">2.</span>获取虚拟目录：<span class="token operator">/</span>day14<span class="token punctuation">,</span><span class="token class-name">String</span> <span class="token function">getContextPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token number">3.</span>获取<span class="token class-name">Servlet</span>路径：<span class="token class-name">String</span> <span class="token function">getServletPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token number">4.</span>获取get方式请求参数：string <span class="token function">getQuerystring</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token number">5.</span>获取请求<span class="token constant">URI</span>：<span class="token class-name">String</span> <span class="token function">getRequestURI</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 	获取<span class="token constant">URL</span>： <span class="token class-name">StringBuffer</span> <span class="token function">getRequestURL</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token number">6.</span> 获取协议及版本：<span class="token constant">HTTP</span><span class="token operator">/</span><span class="token number">1.1</span>，<span class="token class-name">String</span> <span class="token function">getProtocol</span><span class="token punctuation">(</span><span class="token punctuation">)</span>，  
-<span class="token number">7.</span> 获取客户机的<span class="token constant">IP</span>地址：<span class="token class-name">String</span> <span class="token function">getRemoteAddr</span><span class="token punctuation">(</span><span class="token punctuation">)</span>，</code></pre>
+<span class="token number">7.</span> 获取客户机的<span class="token constant">IP</span>地址：<span class="token class-name">String</span> <span class="token function">getRemoteAddr</span><span class="token punctuation">(</span><span class="token punctuation">)</span>，<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h6 id="获取请求头"><a href="#获取请求头" class="headerlink" title="获取请求头"></a>获取请求头</h6><p>test248</p>
 <p>方法：</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token class-name">String</span> <span class="token function">getHeader</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 通过请求头的名称获取请求头的值。</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token class-name">String</span> <span class="token function">getHeader</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 通过请求头的名称获取请求头的值。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h6 id="获取请求体数据"><a href="#获取请求体数据" class="headerlink" title="获取请求体数据"></a>获取请求体数据</h6><p>test249</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//获取字符流</span>
-<span class="token class-name">BufferedReader</span> br<span class="token operator">=</span>req<span class="token punctuation">.</span><span class="token function">getReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//获取字符流</span>
+<span class="token class-name">BufferedReader</span> br<span class="token operator">=</span>req<span class="token punctuation">.</span><span class="token function">getReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <ol>
 <li>获取单个请求参数值<ul>
@@ -588,11 +588,11 @@
 </ol>
 <h6 id="中文乱码问题："><a href="#中文乱码问题：" class="headerlink" title="中文乱码问题："></a><strong>中文乱码问题</strong>：</h6><ul>
 <li><p><strong>解决</strong>：在获取参数前，设置request的编码</p>
-<pre class="language-java" data-language="java"><code class="language-java">res<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"text/html;charset=utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">res<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"text/html;charset=utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//post方法</span>
 request<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//第一个引号是获取的键的名字，get方法</span>
-<span class="token class-name">String</span> username<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token string">"iso-8859-1"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></li>
+<span class="token class-name">String</span> username<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token string">"iso-8859-1"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h6 id="请求转发"><a href="#请求转发" class="headerlink" title="请求转发"></a>请求转发</h6><p>请求转发：一种在服务器内部的资源跳转方式。其实现过程主要包含以下步骤和特点：</p>
 <p><strong>步骤</strong>：</p>
@@ -600,7 +600,7 @@ request<span class="token punctuation">.</span><span class="token function">setC
 <li>通过request对象获取请求转发器对象。</li>
 <li>使用获取到的<code>RequestDispatcher</code>对象来进行转发。</li>
 </ol>
-<pre class="language-java" data-language="java"><code class="language-java">request<span class="token punctuation">.</span><span class="token function">getRequestDispatcher</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//“”写转发路径</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">request<span class="token punctuation">.</span><span class="token function">getRequestDispatcher</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//“”写转发路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p> <strong>特点</strong>：</p>
 <ol>
@@ -609,7 +609,7 @@ request<span class="token punctuation">.</span><span class="token function">setC
 <li>转发是一次请求。在整个转发过程中，客户端（浏览器）只发起了一次请求，服务器内部通过请求转发器对象进行了资源的跳转和处理。</li>
 </ol>
 <p>获取servletContext：</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">ServletContext</span> context <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">ServletContext</span> context <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h4><p><strong>由服务器发送给客户端</strong></p>
 <p>格式：</p>
@@ -634,25 +634,25 @@ request<span class="token punctuation">.</span><span class="token function">setC
 <li><strong>使用输出流</strong>：根据需要选择合适的输出流，将数据写入，最终将数据输出到客户端浏览器。</li>
 </ol>
 <h6 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h6><p>test267</p>
-<pre class="language-java" data-language="java"><code class="language-java">res<span class="token punctuation">.</span><span class="token function">sendRedirect</span><span class="token punctuation">(</span><span class="token string">"/tomcat-demo1/test267Demo2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">res<span class="token punctuation">.</span><span class="token function">sendRedirect</span><span class="token punctuation">(</span><span class="token string">"/tomcat-demo1/test267Demo2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//动态获取虚拟目录</span>
-<span class="token class-name">String</span> contextPath <span class="token operator">=</span> req<span class="token punctuation">.</span><span class="token function">getContextPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//动态获取虚拟目录</span>
+<span class="token class-name">String</span> contextPath <span class="token operator">=</span> req<span class="token punctuation">.</span><span class="token function">getContextPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h6 id="解决中文乱码"><a href="#解决中文乱码" class="headerlink" title="解决中文乱码"></a>解决中文乱码</h6><p>test271</p>
-<pre class="language-java" data-language="java"><code class="language-java">res<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"text/html;charset=utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">res<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"text/html;charset=utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//post方法</span>
 request<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//第一个引号是获取的键的名字，get方法</span>
-<span class="token class-name">String</span> username<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token string">"iso-8859-1"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<span class="token class-name">String</span> username<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token string">"iso-8859-1"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="ServletContext"><a href="#ServletContext" class="headerlink" title="ServletContext"></a>ServletContext</h5><p><strong>获取ServletContext对象的方式</strong></p>
 <ul>
 <li><p>通过request对象获取</p>
-<pre class="language-java" data-language="java"><code class="language-java">request<span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></li>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">request<span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 <p><strong>通过HttpServlet获取</strong>：</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="会话技术"><a href="#会话技术" class="headerlink" title="会话技术"></a>会话技术</h3><p><strong>共享数据</strong></p>
 <h4 id="1-会话"><a href="#1-会话" class="headerlink" title="1. 会话"></a>1. 会话</h4><ul>
@@ -667,13 +667,13 @@ request<span class="token punctuation">.</span><span class="token function">setC
 <p>如果要存储中文，需要转码</p>
 <p>test286</p>
 <p>创建cookie对象，绑定数据</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">new</span> <span class="token class-name">Cookie</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> value<span class="token punctuation">)</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">new</span> <span class="token class-name">Cookie</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> value<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>发送cookie对象</p>
-<pre class="language-java" data-language="java"><code class="language-java">response<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span><span class="token class-name">Cookie</span> cookie<span class="token punctuation">)</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">response<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span><span class="token class-name">Cookie</span> cookie<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>获取cookie，拿到数据</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Cookie</span><span class="token punctuation">[</span><span class="token punctuation">]</span> cookies <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getCookies</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Cookie</span><span class="token punctuation">[</span><span class="token punctuation">]</span> cookies <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getCookies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h6 id="存储时间"><a href="#存储时间" class="headerlink" title="存储时间"></a>存储时间</h6><p>默认浏览器关闭后，cookie自动销毁</p>
 <p>持久化存储：setMaxAge(int seconds)设置时间</p>
@@ -687,23 +687,23 @@ request<span class="token punctuation">.</span><span class="token function">setC
 <p><strong>将数据保存在服务器端</strong></p>
 <ol>
 <li><p><strong>获取HttpSession对象</strong>：</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">HttpSession</span> session <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">HttpSession</span> session <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p><strong>使用HttpSession对象访问属性</strong>：</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Object</span> <span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Object</span> <span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p><strong>设置HttpSession对象的属性</strong>：</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">Object</span> value<span class="token punctuation">)</span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">Object</span> value<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p><strong>删除HttpSession对象的属性</strong>：</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">removeAttribute</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span></code></pre></li>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">removeAttribute</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ol>
 <h6 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h6><p>cookie</p>
 <h6 id="存活时间"><a href="#存活时间" class="headerlink" title="存活时间"></a>存活时间</h6><p>客户端关闭后session就不一样了</p>
 <p>可设置cookie修改存活时间</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Cookie</span> c<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Cookie</span><span class="token punctuation">(</span><span class="token string">"JSESSIONID"</span><span class="token punctuation">,</span>session<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Cookie</span> c<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Cookie</span><span class="token punctuation">(</span><span class="token string">"JSESSIONID"</span><span class="token punctuation">,</span>session<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 c<span class="token punctuation">.</span><span class="token function">setMaxAge</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token operator">*</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-response<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+response<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h6 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h6><ol>
 <li>用于存储一次会话的多次请求的数据，存在于服务器端</li>
@@ -815,7 +815,7 @@ response<span class="token punctuation">.</span><span class="token function">add
 <p>通过jQuery方式来获取名称叫’div’的所有html元素对象<br>var $divs &#x3D; $(“div”);  </p>
 <h3 id="JQ与JS相互转换"><a href="#JQ与JS相互转换" class="headerlink" title="JQ与JS相互转换"></a>JQ与JS相互转换</h3><p>jq –&gt; js ：jq对象[索引l],或者jq对象.get（索引l）</p>
 <p>js –&gt; jq：$(js对象)</p>
-<h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><pre class="language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>点我<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>b1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>点我<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>b1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
     <span class="token comment">//入口函数</span>
     <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
@@ -823,7 +823,7 @@ response<span class="token punctuation">.</span><span class="token function">add
             <span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><h4 id="1-基本选择器"><a href="#1-基本选择器" class="headerlink" title="1. 基本选择器"></a>1. 基本选择器</h4><ul>
 <li>\1. 标签选择器（元素选择器）<ul>
@@ -967,7 +967,7 @@ response<span class="token punctuation">.</span><span class="token function">add
 </ul>
 </li>
 </ol>
-<pre class="language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myinput<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>张三<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myinput<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>张三<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mydiv<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>标题标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
     <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
@@ -991,7 +991,7 @@ response<span class="token punctuation">.</span><span class="token function">add
         <span class="token comment">// 修改id为"mydiv"的HTML元素的文本内容，设置为"bbb"</span>
         <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#mydiv"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token string">"bbb"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h4><h5 id="通用属性操作"><a href="#通用属性操作" class="headerlink" title="通用属性操作"></a>通用属性操作</h5><p>test382</p>
 <ol>
@@ -1011,7 +1011,7 @@ response<span class="token punctuation">.</span><span class="token function">add
 </ol>
 <p><strong><code>attr</code>和<code>prop</code>方法的使用场景有所区别。</strong></p>
 <p><code>prop</code>方法更适用于操作元素的固有属性，而<code>attr</code>方法则更适用于操作元素的自定义属性。</p>
-<pre class="language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bj<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>beijing<span class="token punctuation">"</span></span> <span class="token attr-name">xxx</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>yyy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>北京<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tj<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tianjin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>天津<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
@@ -1036,7 +1036,7 @@ response<span class="token punctuation">.</span><span class="token function">add
 <span class="token comment">// 显示checked属性的值</span>
     <span class="token function">alert</span><span class="token punctuation">(</span>checked<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="对class属性的操作"><a href="#对class属性的操作" class="headerlink" title="对class属性的操作"></a>对class属性的操作</h5><ol>
 <li>addClass()<ul>
@@ -1081,7 +1081,7 @@ response<span class="token punctuation">.</span><span class="token function">add
 <li>功能描述：清空元素的所有后代元素。</li>
 <li>使用方式：*对象.empty()*：将对象的后代元素全部清空，但是保留当前对象以及其属性节点。这里的“对象”可能指的是如HTML DOM中的元素，通过调用该元素的 <code>empty()</code> 方法，可以移除其内部的所有子元素和文本内容，但保留该元素本身及其属性。</li>
 </ul>
-<pre class="language-java" data-language="java"><code class="language-java">$<span class="token punctuation">(</span><span class="token function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">$<span class="token punctuation">(</span><span class="token function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token comment">// 绑定点击事件到ID为"b1"的按钮</span>
     $<span class="token punctuation">(</span><span class="token string">"#b1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token comment">// 使用appendTo方法将ID为"fk"的元素添加到ID为"city"的元素内部的最前面</span>
@@ -1108,7 +1108,7 @@ response<span class="token punctuation">.</span><span class="token function">add
         <span class="token comment">// 使用insertBefore方法将ID为"fk"的元素插入到ID为"tj"的元素前面</span>
         $<span class="token punctuation">(</span><span class="token string">"#fk"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">insertBefore</span><span class="token punctuation">(</span>$<span class="token punctuation">(</span><span class="token string">"#tj"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><h4 id="显示和隐藏元素"><a href="#显示和隐藏元素" class="headerlink" title="显示和隐藏元素"></a>显示和隐藏元素</h4><p>test391</p>
 <h5 id="默认"><a href="#默认" class="headerlink" title="默认"></a>默认</h5><p><strong>显示</strong></p>
@@ -1122,7 +1122,7 @@ response<span class="token punctuation">.</span><span class="token function">add
 </li>
 </ul>
 <p><strong>隐藏和切换</strong></p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 隐藏div</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 隐藏div</span>
 function <span class="token function">hideFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
     $<span class="token punctuation">(</span><span class="token string">"#showDiv"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token string">"slow"</span><span class="token punctuation">,</span><span class="token string">"swing"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
@@ -1134,10 +1134,10 @@ function <span class="token function">showFn</span><span class="token punctuatio
 <span class="token comment">// 切换</span>
 function <span class="token function">toggleFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
     $<span class="token punctuation">(</span><span class="token string">"#showDiv"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toggle</span><span class="token punctuation">(</span><span class="token string">"slow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="滑动"><a href="#滑动" class="headerlink" title="滑动"></a>滑动</h5><p>test392</p>
-<h5 id="淡入淡出"><a href="#淡入淡出" class="headerlink" title="淡入淡出"></a>淡入淡出</h5><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 隐藏div</span>
+<h5 id="淡入淡出"><a href="#淡入淡出" class="headerlink" title="淡入淡出"></a>淡入淡出</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 隐藏div</span>
 function <span class="token function">hideFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
     <span class="token comment">// 滑动</span>
     <span class="token comment">// $("#showDiv").slideUp("slow");</span>
@@ -1154,7 +1154,7 @@ function <span class="token function">showFn</span><span class="token punctuatio
 function <span class="token function">toggleFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
     <span class="token comment">// $("#showDiv").slideToggle("slow");</span>
     $<span class="token punctuation">(</span><span class="token string">"#showDiv"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fadeToggle</span><span class="token punctuation">(</span><span class="token string">"slow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>test393</p>
 <h4 id="JS的for循环遍历"><a href="#JS的for循环遍历" class="headerlink" title="JS的for循环遍历"></a>JS的for循环遍历</h4><p>使用<code>for</code>关键字进行遍历，其基本语法为：<code>for(初始化值; 循环结束条件; 步长)</code>。</p>
@@ -1189,7 +1189,7 @@ function <span class="token function">toggleFn</span><span class="token punctuat
 <h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><h4 id="基本规则"><a href="#基本规则" class="headerlink" title="基本规则"></a>基本规则</h4><p>test411</p>
 <p>​    数据在名称&#x2F;值对中：json数据是由键值对构成的</p>
 <p>   数据由逗号分隔：多个键值对由逗号分隔<br>   花括号保存对象：使用定义json格式<br>   方括号保存数组：[  ]</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 1. 定义基本格式</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 1. 定义基本格式</span>
 <span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token string">"gender"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 
 <span class="token comment">// 2. 嵌套格式</span>
@@ -1203,17 +1203,17 @@ function <span class="token function">toggleFn</span><span class="token punctuat
     <span class="token punctuation">&#123;</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token string">"gender"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#123;</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"李四"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span> <span class="token string">"gender"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#123;</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"王五"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token string">"gender"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">&#125;</span>
-<span class="token punctuation">]</span></code></pre>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><h6 id="获取数组中的值"><a href="#获取数组中的值" class="headerlink" title="获取数组中的值"></a>获取数组中的值</h6><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> key in person<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+<h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><h6 id="获取数组中的值"><a href="#获取数组中的值" class="headerlink" title="获取数组中的值"></a>获取数组中的值</h6><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> key in person<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
     <span class="token function">alert</span><span class="token punctuation">(</span>key<span class="token operator">+</span><span class="token string">":"</span><span class="token operator">+</span>person<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="java转jason"><a href="#java转jason" class="headerlink" title="java转jason"></a>java转jason</h4><p>test413</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//创建核心对象Mapper</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//创建核心对象Mapper</span>
 <span class="token class-name">ObjectMapper</span> mapper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//转化成字符串</span>
-<span class="token class-name">String</span> s <span class="token operator">=</span> mapper<span class="token punctuation">.</span><span class="token function">writeValueAsString</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<span class="token class-name">String</span> s <span class="token operator">=</span> mapper<span class="token punctuation">.</span><span class="token function">writeValueAsString</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><h4 id="字符串类型（String）"><a href="#字符串类型（String）" class="headerlink" title="字符串类型（String）"></a>字符串类型（String）</h4><p><strong>1. 存储（Set）</strong></p>
 <p><strong>2. 获取（Get）</strong></p>
@@ -1251,7 +1251,7 @@ function <span class="token function">toggleFn</span><span class="token punctuat
 <li><strong>del key</strong>：删除指定的键和值</li>
 </ol>
 <h3 id="Jedis"><a href="#Jedis" class="headerlink" title="Jedis"></a>Jedis</h3><h4 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h4><h5 id="String"><a href="#String" class="headerlink" title="String"></a>String</h5><p>test428test1</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//获取连接</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//获取连接</span>
 <span class="token class-name">Jedis</span> jedis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Jedis</span><span class="token punctuation">(</span><span class="token string">"localhost"</span><span class="token punctuation">,</span><span class="token number">6379</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//操作</span>
 jedis<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">,</span><span class="token string">"zhangsan"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1262,10 +1262,10 @@ jedis<span class="token punctuation">.</span><span class="token function">setex<
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>jedis<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//System.out.println(s);</span>
 <span class="token comment">//关闭连接</span>
-jedis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+jedis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="hash（map）"><a href="#hash（map）" class="headerlink" title="hash（map）"></a>hash（map）</h5><p>test428test2</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//获取连接</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//获取连接</span>
 <span class="token class-name">Jedis</span> jedis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Jedis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//操作</span>
 jedis<span class="token punctuation">.</span><span class="token function">hset</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">,</span><span class="token string">"name"</span><span class="token punctuation">,</span><span class="token string">"lisi"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1276,10 +1276,10 @@ jedis<span class="token punctuation">.</span><span class="token function">hset</
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>jedis<span class="token punctuation">.</span><span class="token function">hgetAll</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//System.out.println(s);</span>
 <span class="token comment">//关闭连接</span>
-jedis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+jedis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="list"><a href="#list" class="headerlink" title="list"></a>list</h5><p>test428test3</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//获取连接</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//获取连接</span>
 <span class="token class-name">Jedis</span> jedis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Jedis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//操作</span>
 jedis<span class="token punctuation">.</span><span class="token function">lpush</span><span class="token punctuation">(</span><span class="token string">"myliist"</span><span class="token punctuation">,</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token string">"b"</span><span class="token punctuation">,</span><span class="token string">"c"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1298,10 +1298,10 @@ jedis<span class="token punctuation">.</span><span class="token function">rpush<
 jedis<span class="token punctuation">.</span><span class="token function">del</span><span class="token punctuation">(</span><span class="token string">"myliist"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">//关闭连接</span>
-jedis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+jedis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h5><p>没有重复元素</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//获取连接</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//获取连接</span>
 <span class="token class-name">Jedis</span> jedis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Jedis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//存储</span>
 jedis<span class="token punctuation">.</span><span class="token function">sadd</span><span class="token punctuation">(</span><span class="token string">"myset"</span><span class="token punctuation">,</span><span class="token string">"java"</span><span class="token punctuation">,</span><span class="token string">"C++"</span><span class="token punctuation">,</span><span class="token string">"pyhone"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1311,10 +1311,10 @@ jedis<span class="token punctuation">.</span><span class="token function">sadd</
 
 <span class="token comment">//关闭连接</span>
 jedis<span class="token punctuation">.</span><span class="token function">del</span><span class="token punctuation">(</span><span class="token string">"myset"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-jedis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+jedis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="sortedset"><a href="#sortedset" class="headerlink" title="sortedset"></a>sortedset</h5><p>可排序，无重复元素</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//获取连接</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//获取连接</span>
 <span class="token class-name">Jedis</span> jedis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Jedis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//存储</span>
 jedis<span class="token punctuation">.</span><span class="token function">zadd</span><span class="token punctuation">(</span><span class="token string">"myset"</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string">"java"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1327,13 +1327,13 @@ jedis<span class="token punctuation">.</span><span class="token function">zadd</
 
 <span class="token comment">//关闭连接</span>
 jedis<span class="token punctuation">.</span><span class="token function">del</span><span class="token punctuation">(</span><span class="token string">"myset"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-jedis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+jedis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="连接池"><a href="#连接池" class="headerlink" title="连接池"></a>连接池</h4><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//创建连接池对象</span>
+<h4 id="连接池"><a href="#连接池" class="headerlink" title="连接池"></a>连接池</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//创建连接池对象</span>
 <span class="token class-name">JedisPool</span> jedisPool <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JedisPool</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">//获取连接</span>
-<span class="token class-name">Jedis</span> jedis <span class="token operator">=</span> jedisPool<span class="token punctuation">.</span><span class="token function">getResource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<span class="token class-name">Jedis</span> jedis <span class="token operator">=</span> jedisPool<span class="token punctuation">.</span><span class="token function">getResource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
