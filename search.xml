@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>01背包</title>
+      <link href="/2024/10/21/suan-fa/01-bei-bao/"/>
+      <url>/2024/10/21/suan-fa/01-bei-bao/</url>
+      
+        <content type="html"><![CDATA[<p>1</p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>有 N 件物品和一个容量是 VV 的背包。每件物品只能使用一次。</p><p>第 i 件物品的体积是 vi，价值是 wi。</p><p>求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。</p><p>输出最大价值</p><h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行两个整数，N，VN，V，用空格隔开，分别表示物品数量和背包容积。</p><p>接下来有 NN 行，每行两个整数 vi,wivi,wi，用空格隔开，分别表示第 ii 件物品的体积和价值。</p><h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一个整数，表示最大价值。</p><h3 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h3><p>0&lt;N,V≤10000&lt;N,V≤1000<br>0&lt;vi,wi≤1000</p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>    <span class="token keyword">int</span> n<span class="token punctuation">,</span>m<span class="token punctuation">;</span>    cin<span class="token operator">>></span>n<span class="token operator">>></span>m<span class="token punctuation">;</span>    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">v</span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">w</span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>cin<span class="token operator">>></span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">>></span>w<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">dp</span><span class="token punctuation">(</span><span class="token number">1010</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span>m<span class="token punctuation">;</span>j<span class="token operator">>=</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>j<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>            dp<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>j<span class="token operator">-</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">+</span>w<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">&#125;</span>    <span class="token punctuation">&#125;</span>        cout<span class="token operator">&lt;&lt;</span>dp<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>动漫</title>
       <link href="/2024/09/20/qi-ta/dong-man/"/>
       <url>/2024/09/20/qi-ta/dong-man/</url>
