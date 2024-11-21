@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>git</title>
+      <link href="/2024/11/21/bi-ji/git/"/>
+      <url>/2024/11/21/bi-ji/git/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="本地操作"><a href="#本地操作" class="headerlink" title="本地操作"></a>本地操作</h3><h4 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h4><p>git init</p><h4 id="添加文件到暂存区"><a href="#添加文件到暂存区" class="headerlink" title="添加文件到暂存区"></a>添加文件到暂存区</h4><p>git add .</p><h4 id="提交到仓库"><a href="#提交到仓库" class="headerlink" title="提交到仓库"></a>提交到仓库</h4><p>git commit  -m‘注释内容’  </p><h4 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h4><p>git log</p><p>alias git-log&#x3D;’git log –pretty&#x3D;oneline –abbrev-commit –all –graph’</p><p>git-log</p><h4 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h4><p>git reset –hard commit ID</p><h4 id="创建分支dev01"><a href="#创建分支dev01" class="headerlink" title="创建分支dev01"></a>创建分支dev01</h4><p>git branch dev01</p><h4 id="切换到dev01"><a href="#切换到dev01" class="headerlink" title="切换到dev01"></a>切换到dev01</h4><p>git checkout dev01</p><h5 id="切换到master"><a href="#切换到master" class="headerlink" title="切换到master"></a>切换到master</h5><p>git checkout master</p><h4 id="合并dev01到master分支"><a href="#合并dev01到master分支" class="headerlink" title="合并dev01到master分支"></a>合并dev01到master分支</h4><p>git merge dev01</p><p>解决冲突</p><h4 id="删除分支dev01"><a href="#删除分支dev01" class="headerlink" title="删除分支dev01"></a>删除分支dev01</h4><p>git branch -d dev01</p><h3 id="开启云端"><a href="#开启云端" class="headerlink" title="开启云端"></a>开启云端</h3><h4 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h4><p>git remote add origin (gitee 仓库的 ssh)</p><h4 id="查看远程仓库"><a href="#查看远程仓库" class="headerlink" title="查看远程仓库"></a>查看远程仓库</h4><p>git remote</p><h4 id="上传到远程仓库"><a href="#上传到远程仓库" class="headerlink" title="上传到远程仓库"></a>上传到远程仓库</h4><p>git push –set-upstream origin master :master</p><p>(前面是要上传的本地分支的名字：后面是远端分支的名字)</p><p>(set绑定之后可以直接push)</p><p>git push</p><p><strong>或者</strong></p><p>git push origin master:master</p><h4 id="查看仓库绑定关系"><a href="#查看仓库绑定关系" class="headerlink" title="查看仓库绑定关系"></a>查看仓库绑定关系</h4><p>git branch -vv</p><h4 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h4><p><strong>（将云端仓库拉到本地仓库）</strong></p><p>git clone  (ssh)  (名字)</p><h4 id="拉取"><a href="#拉取" class="headerlink" title="拉取"></a>拉取</h4><p><strong>只会添加不同的文件</strong></p><p>git pull</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vector二维数组</title>
+      <link href="/2024/11/21/suan-fa/vector-er-wei-shu-zu/"/>
+      <url>/2024/11/21/suan-fa/vector-er-wei-shu-zu/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> n<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span>m<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token function">a</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>并查集</title>
       <link href="/2024/11/04/suan-fa/bing-cha-ji/"/>
       <url>/2024/11/04/suan-fa/bing-cha-ji/</url>
